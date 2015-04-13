@@ -16,14 +16,15 @@ public class MainActivity extends Activity implements OnClickListener {
         setContentView(R.layout.activity_main);
         
      // Set up click listeners for all the buttons
-        /*View continueButton = this.findViewById(R.id.continue_button);
-        continueButton.setOnClickListener( this);
-        View newButton = this.findViewById(R.id.new_button);
-        newButton.setOnClickListener( this);*/
         View aboutButton = this.findViewById(R.id.about_button);
         aboutButton.setOnClickListener(this);
-        /*View exitButton = this.findViewById(R.id.exit_button);
-        exitButton.setOnClickListener(this);  */      
+        
+        View continueButton = this.findViewById(R.id.continue_button);
+        continueButton.setOnClickListener( this);
+        View newButton = this.findViewById(R.id.new_game_button);
+        newButton.setOnClickListener( this);
+        View exitButton = this.findViewById(R.id.exit_button);
+        exitButton.setOnClickListener(this);     
         
         
     }

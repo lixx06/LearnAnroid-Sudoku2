@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name="org.example.sudoku2.About"
-			android:label="@string/about_title">
+			android:label="@string/about_title"
+			android:theme="@android:style/Theme.Dialog">
 		</activity>
         
        
