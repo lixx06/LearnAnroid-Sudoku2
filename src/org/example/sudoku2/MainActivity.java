@@ -28,9 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
         View newButton = this.findViewById(R.id.new_game_button);
         newButton.setOnClickListener( this);
         View exitButton = this.findViewById(R.id.exit_button);
-        exitButton.setOnClickListener(this);     
-        
-        
+        exitButton.setOnClickListener(this);        
     }
 
     @Override
@@ -51,7 +49,6 @@ public class MainActivity extends Activity implements OnClickListener {
     	return false;
     }
 
-
 	public void onClick(View v) {		
 		switch (v.getId()) {
 		case R.id.about_button:
@@ -60,6 +57,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.new_game_button:
 			openNewGameDialog();
+			break;
+		case R.id.exit_button:
+			finish();
 			break;
 		}
 	}
@@ -83,8 +83,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private void startGame(int i) {
 		Log.d(TAG, "clicked on " + i);
 		// Start game here...
-	}
-	
+	}	
 	
 }
 
