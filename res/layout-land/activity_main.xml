@@ -13,7 +13,7 @@
       <TableLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center" android:stretchColumns="*">
          <TableRow>
             <Button android:id="@+id/continue_button" android:text="@string/continue_label"/>
-            <Button android:id="@+id/new_button" android:text="@string/new_game_label"/>
+            <Button android:id="@+id/new_game_button" android:text="@string/new_game_label"/>
          </TableRow>
          <TableRow>
             <Button android:id="@+id/about_button" android:text="@string/about_label"/>
