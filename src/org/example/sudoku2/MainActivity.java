@@ -2,7 +2,10 @@ package org.example.sudoku2;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,7 +58,31 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent i = new Intent(this, About.class);
 			startActivity(i);
 			break;
+		case R.id.new_game_button:
+			openNewGameDialog();
+			break;
 		}
+	}
+	
+	private static final String TAG = "Sudoku" ;
+	
+	/** Ask the user what difficulty level they want */
+	private void openNewGameDialog() {
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.new_game_title)
+		.setItems(R.array.difficulty,
+		new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialoginterface, int i) {
+				startGame(i);
+			}
+		})
+		.show();
+	}
+
+	/** Start a new game with the given difficulty level */
+	private void startGame(int i) {
+		Log.d(TAG, "clicked on " + i);
+		// Start game here...
 	}
 	
 	
