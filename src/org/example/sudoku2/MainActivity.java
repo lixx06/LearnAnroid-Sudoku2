@@ -82,6 +82,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	/** Start a new game with the given difficulty level */
 	private void startGame(int i) {
 		Log.d(TAG, "clicked on " + i);
+		Intent intent = new Intent(MainActivity.this, Game.class);
+		intent.putExtra(Game.KEY_DIFFICULTY, i);
+		startActivity(intent);
 		// Start game here...
 	}	
 	

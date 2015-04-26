@@ -3,4 +3,5 @@
 *.ap_
 *.apk
 *.jar
+*.cache
 
